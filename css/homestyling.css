@@ -150,6 +150,10 @@ header h1 span {
 
 
 @media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    
     .section1 {
         margin-top: 10px;
     }
