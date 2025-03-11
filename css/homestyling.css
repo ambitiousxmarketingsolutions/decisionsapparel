@@ -1,0 +1,156 @@
+html {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+header {
+    margin-top: 0;
+    height: 80px;
+    display: flex;
+
+}
+
+header h1 {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    margin-left: 5%;
+}
+
+header h1 span {
+    color: red;
+}
+
+.section1 {
+    margin-top: 40px;
+    background-image: url('../images/decisionlogo2.JPG');
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Dark transparent overlay */
+.section1::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Position it on top of the background image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+    z-index: 1; /* Ensure the overlay is above the background */
+}
+
+/* Make sure the content is above the overlay */
+.section1 > * {
+    z-index: 2;
+}
+
+
+.logo {
+    width: 60%;
+    height: auto;
+}
+
+
+.introcontent {
+    position: absolute;
+    text-align: center;
+    top: 90%;
+}
+
+
+.introcontent h2, a {
+    font-family: "Oswald", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.introcontent a {
+    border: 1px solid white;
+    padding: 10px 25px;
+    font-size: 18px;
+}
+
+.introcontent a:hover {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+.section3 {
+    margin-left: 12%;
+    margin-top: 100px;
+    width: 100%;
+    position: relative;
+    
+}
+
+.section4 {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+.section3_image_container {
+    display: flex;
+    gap: 10px;
+}
+
+.section3_image_container img {
+    width: 20%;
+}
+
+.section3 h1 {
+    font-family: "Oswald", sans-serif;
+    color: white;
+}
+
+.grid-container {
+    top: 90%;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, auto);    /* 3 rows */
+    margin: 0;
+    padding: 0;
+    gap: 0;     /* Remove any space between grid items */
+}
+
+.grid-container div {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* Ensure images don't overflow */
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container img {
+    width: 100%;  /* Make the images fill the entire grid cell */
+    height: 100%; /* Make the images fill the entire grid cell */
+    object-fit: cover; /* Ensure the image covers the grid cell without stretching */
+    padding: 0;
+    margin: 0;
+}
+
+
+@media (max-width: 480px) {
+    .section1 {
+        margin-top: 10px;
+    }
+}
