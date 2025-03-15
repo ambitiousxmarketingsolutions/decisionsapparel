@@ -193,6 +193,24 @@ footer h1 {
     margin-left: 5px;
 }
 
+.ams_credits {
+    display: flex;
+    align-items: center;
+    margin-right: 50%;
+}
+
+.ams_credits p {
+    font-family: 'Oswald', sans-serif;
+    text-wrap: nowrap;
+    color: white;
+}
+
+.ams_credits img {
+    width: 40%;
+    margin-bottom: 20px;
+    height: auto;
+}
+
 
 @media (max-width: 480px) {
     html, body {
@@ -267,5 +285,22 @@ footer h1 {
     .footer_image_container img {
         width: 10%;
     }
+
+    .ams_credits {
+        gap: 45px;
+    }
+
+    .ams_credits img {
+        width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+
+    .ams_credits p {
+        margin-left: 10px;
+        width: 100px;
+        text-wrap: nowrap;
+    } 
 
 }
